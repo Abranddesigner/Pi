@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pi Ecosystem</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Ecosystem Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top-bar">
-    <h1>Home <span class="pi-icon">🟣</span></h1>
-  </header>
-
-  <main>
-    <section class="welcome">
-      <h2><img src="https://ik.imagekit.io/pinet/Pi/Pi%20logo.png?updatedAt=1753683705173" class="logo"> Welcome to the Pi Ecosystem</h2>
-    </section>
-
-    <section class="core">
-      <h3>Core Team Apps</h3>
-      <div class="grid">
-        <a href="https://fireside.pinet.com" class="app"><img src="https://ik.imagekit.io/pinet/Pi/Fireside.png?updatedAt=1753683701449"><p>Fireside</p></a>
-        <a href="https://ik.imagekit.io/pinet/Error.jpg?updatedAt=1753683786248" class="app"><img src="https://ik.imagekit.io/pinet/Pi/Wallet.png?updatedAt=1753683706335"><p>Wallet</p></a>
-        <a href="https://brainstorm.pinet.com" class="app"><img src="https://ik.imagekit.io/pinet/Pi/Brainstorm.png?updatedAt=1753683701667"><p>Brainstorm</p></a>
-        <a href="https://mine.pinet.com" class="app"><img src="https://ik.imagekit.io/pinet/Pi/Mine.png?updatedAt=1753683701525"><p>Mine</p></a>
-        <a href="https://blockexplorer.minepi.com/mainnet" class="app"><img src="https://ik.imagekit.io/pinet/Pi/Blockchain.png?updatedAt=1753683701673"><p>Blockchain</p></a>
-        <a href="https://develop.pinet.com" class="app"><img src="https://ik.imagekit.io/pinet/Pi/DevPortal.png?updatedAt=1753683701459"><p>DevPortal</p></a>
-      </div>
-    </section>
-
-    <a href="https://appstudio.pinet.com" class="privacy">Privacy Policy</a>
-  </main>
-
-  <footer>
-    <a href="https://socialchain.app/privacy">
-      <span class="footer-icon">🌱</span> Explore the Ecosystem
-    </a>
-  </footer>
-
-  <script src="script.js"></script>
+    <header>
+        <img src="https://ik.imagekit.io/pinet/Top.jpg?updatedAt=1753641699086" alt="Top Banner" class="top-banner">
+        <div class="logo-container">
+            <img src="https://ik.imagekit.io/pinet/Pi/Pi%20logo.png?updatedAt=1753683705173" alt="Pi Logo" class="pi-logo">
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#" class="active" data-url="home"><img src="https://ik.imagekit.io/pinet/Pi/Pi%20logo.png?updatedAt=1753683705173" alt="Home Icon" class="nav-icon"> Home</a></li>
+                <li><a href="#" data-url="https://fireside.pinet.com"><img src="https://ik.imagekit.io/pinet/Pi/Fireside.png?updatedAt=1753683701449" alt="Fireside Icon" class="nav-icon"> Fireside</a></li>
+                <li><a href="#" data-url="https://brainstorm.pinet.com"><img src="https://ik.imagekit.io/pinet/Pi/Brainstorm.png?updatedAt=1753683701667" alt="Brainstorm Icon" class="nav-icon"> Brainstorm</a></li>
+                <li><a href="#" data-url="https://mine.pinet.com"><img src="https://ik.imagekit.io/pinet/Pi/Mine.png?updatedAt=1753683701525" alt="Mine Icon" class="nav-icon"> Mine</a></li>
+                <li><a href="#" data-url="https://blockexplorer.minepi.com/mainnet"><img src="https://ik.imagekit.io/pinet/Pi/Blockchain.png?updatedAt=1753683701673" alt="Blockchain Icon" class="nav-icon"> Blockchain</a></li>
+                <li><a href="#" data-url="https://develop.pinet.com"><img src="https://ik.imagekit.io/pinet/Pi/DevPortal.png?updatedAt=1753683701459" alt="Develop Icon" class="nav-icon"> Develop</a></li>
+                <li><a href="#" data-url="https://kyc.pinet.com"><img src="https://ik.imagekit.io/pinet/Pi/KYC.png?updatedAt=1753683701705" alt="KYC Icon" class="nav-icon"> KYC</a></li>
+                <li><a href="#" data-url="https://chat.pinet.com"><img src="https://ik.imagekit.io/pinet/Pi/Chat.png?updatedAt=1753683701395" alt="Chat Icon" class="nav-icon"> Chat</a></li>
+                <li><a href="#" data-url="https://profiles.pinet.com/profiles"><img src="https://ik.imagekit.io/pinet/Pi/Profiles.png?updatedAt=1753683706265" alt="Profiles Icon" class="nav-icon"> Profiles</a></li>
+                <li><a href="#" data-url="https://domains.pinet.com/auctions"><img src="https://ik.imagekit.io/pinet/Pi/Domains.png?updatedAt=1753683701312" alt="Domains Icon" class="nav-icon"> Domains</a></li>
+                <li><a href="#" data-url="https://appstudio.pinet.com"><img src="https://ik.imagekit.io/pinet/Pi/App%20Studio.png?updatedAt=1753683701355" alt="App Studio Icon" class="nav-icon"> App Studio</a></li>
+                <li><a href="#" data-url="https://socialchain.app/privacy"><img src="https://ik.imagekit.io/pinet/Pi/Unlock%20Pi.png?updatedAt=1753683706354" alt="Privacy Policy Icon" class="nav-icon"> Privacy Policy</a></li>
+                <li><a href="#" data-url="https://ecosystem.pinet.com"><img src="https://ik.imagekit.io/pinet/Pi/Unlock%20Pi.png?updatedAt=1753683706354" alt="Ecosystem Icon" class="nav-icon"> Explore the Ecosystem</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button id="backButton" style="display: none;">Back to Dashboard</button>
+        <iframe id="contentFrame" src="about:blank" style="width: 100%; height: 100vh; border: none;"></iframe>
+    </main>
+    <footer>
+        <img src="https://ik.imagekit.io/pinet/Pi/Footer.jpg?updatedAt=1753683701761" alt="Footer Image" class="footer-image">
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
