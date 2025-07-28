@@ -1,83 +1,97 @@
-/* style.css */
-
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fdfdfd;
-  color: #333;
-  text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header img.header-img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
+.top-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 10px 0;
 }
 
 .pi-logo {
-  width: 80px;
-  margin-top: 20px;
+    width: 100px;
+    height: auto;
 }
 
-h1, h2 {
-  margin: 0.5rem 0;
-  font-weight: 600;
+.navbar {
+    background-color: #1a1a1a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.core-apps {
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: auto;
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
 }
 
-.apps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+.nav-links li {
+    margin: 10px;
 }
 
-.apps a {
-  text-decoration: none;
-  color: inherit;
-  border-radius: 10px;
-  padding: 1rem;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
 }
 
-.apps a:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.nav-links a:hover {
+    color: #ffd700;
 }
 
-.apps img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
+.nav-links a.active {
+    color: #ffd700;
+    font-weight: bold;
 }
 
-.apps p {
-  margin-top: 0.75rem;
-  font-weight: 500;
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
 
-.privacy {
-  display: inline-block;
-  margin-top: 2rem;
-  color: #007bff;
-  text-decoration: underline;
-  font-size: 14px;
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+#backButton {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#backButton:hover {
+    background-color: #333;
+}
+
+.footer-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 footer {
-  background-color: #f4f4f4;
-  padding: 1.5rem;
-  margin-top: 3rem;
-}
-
-footer img {
-  width: 120px;
-  cursor: pointer;
+    margin-top: auto;
 }
