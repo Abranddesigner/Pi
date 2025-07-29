@@ -51,7 +51,7 @@ body {
 }
 
 .heading img {
-  height: 30px;              /* 🟢 thoda bada icon (pehle 16px tha) */
+  height: 25px;              /* 🟢 thoda bada icon (pehle 16px tha) */
 }
 
 .apps-section {
@@ -89,8 +89,8 @@ body {
 }
 
 .app img {
-  width: 80px;      /* 🔼 bada kar diya */
-  height: 80px;
+  width: 90px;      /* 🔼 bada kar diya */
+  height: 90px;
   margin-bottom: 6px;
 }
 
@@ -107,7 +107,7 @@ body {
 .privacy-section a {
   color: var(--purple);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-decoration: underline;
 }
 
@@ -143,6 +143,6 @@ body {
 
   .topbar img,
   .heading img {
-    height: 18px;
+    height: 25px;
   }
 }
