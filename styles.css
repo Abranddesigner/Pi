@@ -1,78 +1,87 @@
-/* style.css */
+/* style.css - Modern Clean Theme */
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-  color: #111111;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F9FAFB;
+  color: #1F2937; /* gray-800 */
 }
 
 header {
   text-align: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(90deg, #7E5FFF 0%, #45AFFF 100%);
-  color: white;
+  padding: 3rem 1rem;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #E5E7EB;
 }
 
 .logo {
-  width: 120px;
+  width: 140px;
   height: auto;
   margin-bottom: 1rem;
 }
 
 h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #111827; /* gray-900 */
 }
 
 .apps {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
-  padding: 3rem 1rem;
-  max-width: 1400px;
+  padding: 4rem 2rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .app-card {
-  background-color: #f9f9f9;
-  border: 1px solid #E5E7EB;
-  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #D1D5DB;
+  border-radius: 16px;
   text-align: center;
-  width: 150px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   text-decoration: none;
-  color: #111111;
-  transition: transform 0.2s, box-shadow 0.2s;
+  color: #1F2937;
+  transition: all 0.25s ease-in-out;
 }
 
 .app-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border-color: #7E5FFF;
 }
 
 .app-card img {
-  width: 8px;
-  height: 8px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.app-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: #F3F4F6;
   font-size: 0.9rem;
+  border-top: 1px solid #E5E7EB;
 }
 
 footer a {
   color: #3B82F6;
   text-decoration: none;
+  font-weight: 500;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
-
