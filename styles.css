@@ -8,32 +8,33 @@
 :root {
   --primary: #7E5FFF;
   --text-dark: #111111;
-  --text-muted: #6B7280;
   --background: #ffffff;
-  --border-light: #E5E7EB;
 }
 
-body {
-  background-color: var(--background);
-  font-family: 'Segoe UI', sans-serif;
-  text-align: center;
-  color: var(--primary);
-}
-
-/* Top Navigation Bar */
+/* Top purple bar */
 .topbar {
   background-color: var(--primary);
   color: white;
   padding: 12px 0;
   font-size: 1.1rem;
   font-weight: bold;
+  text-align: center;
 }
 
-/* Main Section */
+/* Main body */
+body {
+  background: var(--background);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+/* Page section */
 .content {
   padding: 30px 20px;
 }
 
+/* Headings */
 .heading {
   font-size: 1.8rem;
   color: orange;
@@ -42,40 +43,43 @@ body {
 
 .subheading {
   font-size: 1.2rem;
-  color: var(--text-dark);
   margin-bottom: 30px;
+  color: var(--text-dark);
 }
 
-/* Grid Layout */
+/* App icon grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 900px;
+  gap: 24px;
+  max-width: 700px;
   margin: 0 auto 40px;
 }
 
 .app {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-decoration: none;
+  color: var(--primary);
   border: 2px solid var(--primary);
   border-radius: 20px;
-  padding: 20px;
+  padding: 16px;
   width: 120px;
   margin: auto;
   transition: transform 0.3s ease, box-shadow 0.3s;
-  color: var(--primary);
 }
 
 .app:hover {
+  background-color: #f3f4f6;
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(126, 95, 255, 0.2);
 }
 
 .app img {
   width: 60px;
   height: 60px;
   margin-bottom: 10px;
+  border-radius: 12px;
 }
 
 .app p {
@@ -84,29 +88,30 @@ body {
 }
 
 /* Footer */
-.footer-links {
-  margin-top: 20px;
+.footer {
+  margin-top: 30px;
 }
 
-.footer-links a {
+.privacy {
   color: var(--primary);
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
   font-size: 1rem;
 }
 
-.footer-links button {
-  margin-top: 10px;
+.explore-btn {
+  display: block;
+  margin: 14px auto 0;
   background: var(--primary);
-  color: white;
+  color: #fff;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 10px 24px;
   font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-/* Responsive */
+/* Responsive layout */
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
