@@ -45,20 +45,27 @@ body {
   align-items: center;
   gap: 8px;
   color: orange;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: 8px;
 }
 
 .heading img {
-  height: 22px;
+  height: 25px;
+}
+
+.apps-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .subheading {
-  text-align: right;
+  text-align: left;
+  margin-bottom: 16px;
   font-size: 1rem;
-  font-weight: bold;
-  margin: 20px 0;
+  font-weight: 600;
 }
+
 
 /* App Grid */
 .grid {
