@@ -1,43 +1,67 @@
-body {
+/* General Reset */
+* {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #FFFFFF;
-  color: #7E5FFF;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Theme Colors */
+:root {
+  --primary: #7E5FFF;
+  --text-dark: #000;
+  --text-muted: #6B7280;
+  --background: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--primary);
   text-align: center;
 }
 
+/* Top Navigation Bar */
 .topbar {
-  background-color: #7E5FFF;
-  color: #FFFFFF;
-  padding: 10px;
-  font-weight: bold;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
+/* Content Section */
+.content {
+  padding: 30px 20px;
+}
+
+/* Headings */
 .heading {
-  font-size: 1.5rem;
-  color: #FFA500;
-  margin: 20px 0 10px;
+  font-size: 1.8rem;
+  color: orange;
+  margin-bottom: 10px;
 }
 
 .subheading {
-  color: #000;
-  margin-bottom: 30px;
+  color: var(--text-dark);
   font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
+/* App Grid Layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
 }
 
 .app {
-  border: 2px solid #7E5FFF;
+  border: 2px solid var(--primary);
   border-radius: 20px;
   padding: 20px;
+  width: 120px;
   transition: transform 0.3s ease;
 }
 
@@ -52,30 +76,47 @@ body {
 }
 
 .app p {
-  margin: 0;
   font-weight: 500;
-  color: #7E5FFF;
+  color: var(--primary);
 }
 
-footer {
-  margin-top: 40px;
-  padding: 20px;
-  border-top: 1px solid #EEE;
+/* Footer Area */
+.footer-links {
+  margin-top: 20px;
 }
 
-footer a {
+.footer-links a {
   text-decoration: none;
-  color: #7E5FFF;
+  color: var(--primary);
   font-weight: bold;
+  font-size: 1rem;
 }
 
-footer button {
-  margin-top: 10px;
-  background: #7E5FFF;
-  color: #fff;
+.footer-links button {
+  display: block;
+  margin: 12px auto 0;
+  background-color: var(--primary);
+  color: white;
   border: none;
   padding: 12px 20px;
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    width: 80%;
+  }
 }
