@@ -51,7 +51,7 @@ body {
 }
 
 .heading img {
-  height: 25px;              /* 🟢 thoda bada icon (pehle 16px tha) */
+  height: 35px;              /* 🟢 thoda bada icon (pehle 16px tha) */
 }
 
 .apps-section {
@@ -96,7 +96,7 @@ body {
 
 .app p {
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 /* Privacy section */
