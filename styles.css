@@ -7,76 +7,98 @@
   --link-blue: #3B82F6;
   --border-light: #E5E7EB;
   --border-medium: #D1D5DB;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  line-height: 1.6;
 }
 
-header {
-  background: linear-gradient(to right, var(--accent-purple), var(--accent-blue));
-  color: white;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-nav a {
-  color: white;
+a {
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+  color: var(--text-color);
+  font-weight: 500;
+  margin: 0 12px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.header {
+  background: linear-gradient(to right, var(--accent-purple), var(--accent-blue));
+  padding: 1rem 0;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .container {
   max-width: 960px;
-  margin: 40px auto;
+  margin: 60px auto;
   padding: 0 20px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.hero, .about {
+  text-align: center;
 }
 
-p {
+.main-heading {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.subtext {
+  font-size: 1.1rem;
   color: var(--subtext-color);
-  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-button {
+.btn-primary {
   background: linear-gradient(to right, var(--accent-purple), var(--accent-blue));
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 12px 32px;
   font-size: 1rem;
+  border-radius: 10px;
   cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in-out;
 }
 
-button:hover {
+.btn-primary:hover {
   transform: scale(1.05);
 }
 
-.message {
+.output-text {
   margin-top: 20px;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--link-blue);
 }
 
-footer {
-  border-top: 1px solid var(--border-light);
-  text-align: center;
+.footer {
+  margin-top: 80px;
   padding: 20px;
+  text-align: center;
+  border-top: 1px solid var(--border-light);
   color: var(--subtext-color);
-  margin-top: 40px;
+  font-size: 0.9rem;
 }
