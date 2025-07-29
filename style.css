@@ -40,17 +40,17 @@ body {
 }
 
 .heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  font-size: 0.95rem;        /* chhoti size */
   color: orange;
-  font-size: 1rem;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;         /* 🟢 ek line me hi rakhne ke liye */
 }
 
 .heading img {
-  height: 25px;
+  height: 16px;              /* 🟢 icon text ke barabar */
 }
 
 .apps-section {
