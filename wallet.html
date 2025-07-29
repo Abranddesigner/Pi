@@ -56,13 +56,13 @@
       font-size: 1.2rem;
     }
 
-    .passphrase-box {
+.passphrase-box {
   border: 1px solid #ccc;
   border-radius: 12px;
   padding: 16px;
   width: 90%;
   max-width: 400px;
-  height: 400px;              /* ✅ Equal height to max-width */
+  aspect-ratio: 1 / 1;  /* ✅ Square box (same width & height) */
   margin: 0 auto 20px auto;
   box-sizing: border-box;
   display: flex;
@@ -82,17 +82,21 @@
   padding: 8px;
 }
 
+/* ✅ Make both buttons same width as box */
+.btn-border,
+.btn-filled {
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
 
-    .btn-border {
-      border: 2px solid var(--purple);
-      color: var(--purple);
-      background: transparent;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-bottom: 16px;
-    }
+/* Optional: Reduce box height on very small screens */
+@media (max-width: 480px) {
+  .passphrase-box {
+    aspect-ratio: 1 / 1;
+    max-height: 320px;
+  }
+}
 
     .btn-filled {
       background-color: var(--purple);
