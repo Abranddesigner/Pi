@@ -1,87 +1,82 @@
-/* style.css - Modern Clean Theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --subtext-color: #6B7280;
+  --accent-purple: #7E5FFF;
+  --accent-blue: #45AFFF;
+  --link-blue: #3B82F6;
+  --border-light: #E5E7EB;
+  --border-medium: #D1D5DB;
+}
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F9FAFB;
-  color: #1F2937; /* gray-800 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 header {
+  background: linear-gradient(to right, var(--accent-purple), var(--accent-blue));
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 3rem 1rem;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border-bottom: 1px solid #E5E7EB;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.logo {
-  width: 140px;
-  height: auto;
-  margin-bottom: 1rem;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 h1 {
-  margin: 0;
   font-size: 2.5rem;
-  font-weight: 600;
-  color: #111827; /* gray-900 */
+  margin-bottom: 10px;
 }
 
-.apps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+p {
+  color: var(--subtext-color);
+  line-height: 1.6;
 }
 
-.app-card {
-  background-color: #ffffff;
-  border: 1px solid #D1D5DB;
-  border-radius: 16px;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-  text-decoration: none;
-  color: #1F2937;
-  transition: all 0.25s ease-in-out;
-}
-
-.app-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  border-color: #7E5FFF;
-}
-
-.app-card img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 0.75rem;
-}
-
-.app-card p {
+button {
+  background: linear-gradient(to right, var(--accent-purple), var(--accent-blue));
+  color: white;
+  border: none;
+  padding: 12px 24px;
   font-size: 1rem;
-  font-weight: 500;
-  margin: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.message {
+  margin-top: 20px;
+  font-weight: bold;
+  color: var(--link-blue);
 }
 
 footer {
+  border-top: 1px solid var(--border-light);
   text-align: center;
-  padding: 2rem 1rem;
-  background-color: #F3F4F6;
-  font-size: 0.9rem;
-  border-top: 1px solid #E5E7EB;
-}
-
-footer a {
-  color: #3B82F6;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  padding: 20px;
+  color: var(--subtext-color);
+  margin-top: 40px;
 }
