@@ -56,57 +56,55 @@
       font-size: 1.2rem;
     }
 
-.passphrase-box {
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 16px;
-  width: 90%;
-  max-width: 400px;
-  aspect-ratio: 1 / 1;  /* ✅ Square box (same width & height) */
-  margin: 0 auto 20px auto;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .passphrase-box {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 16px;
+      width: 90%;
+      max-width: 400px;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto 20px auto;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.passphrase-box textarea {
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  resize: none;
-  font-size: 1rem;
-  font-family: 'Segoe UI', sans-serif;
-  border-radius: 8px;
-  padding: 8px;
-}
+    .passphrase-box textarea {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      resize: none;
+      font-size: 1rem;
+      font-family: 'Segoe UI', sans-serif;
+      border-radius: 8px;
+      padding: 8px;
+    }
 
-/* ✅ Make both buttons same width as box */
-.btn-border,
-.btn-filled {
-  width: 90%;
-  max-width: 400px;
-  box-sizing: border-box;
-}
+    .btn-border,
+    .btn-filled {
+      width: 90%;
+      max-width: 400px;
+      box-sizing: border-box;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 10px auto;
+      display: block;
+    }
 
-/* Optional: Reduce box height on very small screens */
-@media (max-width: 480px) {
-  .passphrase-box {
-    aspect-ratio: 1 / 1;
-    max-height: 320px;
-  }
-}
+    .btn-border {
+      border: 2px solid var(--purple);
+      background: transparent;
+      color: var(--purple);
+    }
 
     .btn-filled {
       background-color: var(--purple);
       color: white;
-      border-radius: 8px;
-      padding: 10px 20px;
       border: none;
-      font-weight: bold;
-      cursor: pointer;
-      margin-bottom: 20px;
     }
 
     .note {
@@ -126,6 +124,12 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
+    @media (max-width: 480px) {
+      .passphrase-box {
+        max-height: 320px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -135,15 +139,15 @@
     Wallet
     <img src="https://ik.imagekit.io/pinet/Pi/Pi%20logo.png?updatedAt=1753683705173" alt="Pi Logo" />
   </div>
+
   <div class="content">
     <h2>Unlock Pi Wallet</h2>
 
     <div class="passphrase-box">
-      <textarea placeholder="Enter your 24-word passphrase here" required></textarea>
+      <textarea placeholder="Enter your 24-word&#10;passphrase here" required></textarea>
     </div>
 
     <button class="btn-border">Unlock With Passphrase</button>
-    <br />
     <button class="btn-filled">Unlock With Fingerprint</button>
 
     <p class="note">
