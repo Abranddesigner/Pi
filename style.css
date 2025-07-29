@@ -122,13 +122,13 @@ body {
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    column-gap: 8px;     /* horizontal space kam */
+    row-gap: 20px;       /* vertical space zyada */
   }
 
-@media (max-width: 480px) {
   .app img {
-    width: 50px;     /* mobile me slightly smaller */
-    height: 50px;
+    width: 60px;         /* 🔼 icon size bada mobile me bhi */
+    height: 60px;
   }
 }
 
