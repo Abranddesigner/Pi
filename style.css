@@ -41,7 +41,7 @@ body {
 
 .heading {
   font-size: 1rem;        /* text size same rahe */
-  font-weight: bold;         /* 🟢 bold text */
+  font-weight: semibold;         /* 🟢 bold text */
   color: orange;
   margin-bottom: 10px;
   display: inline-flex;
