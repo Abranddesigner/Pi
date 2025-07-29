@@ -51,7 +51,7 @@ body {
 }
 
 .heading img {
-  height: 25px;              /* 🟢 thoda bada icon (pehle 16px tha) */
+  height: 35px;              /* 🟢 thoda bada icon (pehle 16px tha) */
 }
 
 .apps-section {
@@ -72,7 +72,8 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  column-gap: 8px;     /* 🟣 Horizontal gap kam */
+  row-gap: 20px;        /* 🟢 Vertical gap zyada */
   max-width: 800px;
   padding: 16px;
   margin: 0 auto;
@@ -88,8 +89,8 @@ body {
 }
 
 .app img {
-  width: 60px;
-  height: 60px;
+  width: 80px;      /* 🔼 bada kar diya */
+  height: 80px;
   margin-bottom: 6px;
 }
 
@@ -124,10 +125,12 @@ body {
     gap: 12px;
   }
 
+@media (max-width: 480px) {
   .app img {
-    width: 40px;
-    height: 40px;
+    width: 50px;     /* mobile me slightly smaller */
+    height: 50px;
   }
+}
 
   .heading {
     font-size: 1.1rem;
