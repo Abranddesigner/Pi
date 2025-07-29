@@ -40,17 +40,18 @@ body {
 }
 
 .heading {
-  font-size: 0.95rem;        /* chhoti size */
+  font-size: 1rem;        /* text size same rahe */
+  font-weight: bold;         /* 🟢 bold text */
   color: orange;
   margin-bottom: 10px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  flex-wrap: nowrap;         /* 🟢 ek line me hi rakhne ke liye */
+  flex-wrap: nowrap;         /* 🟢 ek line me */
 }
 
 .heading img {
-  height: 16px;              /* 🟢 icon text ke barabar */
+  height: 25px;              /* 🟢 thoda bada icon (pehle 16px tha) */
 }
 
 .apps-section {
@@ -73,6 +74,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   max-width: 800px;
+  padding: 16px;
   margin: 0 auto;
 }
 
