@@ -1,40 +1,36 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Main Theme Colors */
 :root {
   --primary: #7E5FFF;
-  --text-dark: #000;
-  --text-muted: #6B7280;
+  --text-dark: #000000;
   --background: #ffffff;
 }
 
 body {
   background-color: var(--background);
   font-family: 'Segoe UI', sans-serif;
-  color: var(--primary);
   text-align: center;
+  color: var(--primary);
 }
 
-/* Top Navigation Bar */
+/* Top Bar */
 .topbar {
   background-color: var(--primary);
   color: white;
-  padding: 10px 0;
+  padding: 12px 0;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-/* Content Section */
+/* Section */
 .content {
   padding: 30px 20px;
 }
 
-/* Headings */
 .heading {
   font-size: 1.8rem;
   color: orange;
@@ -42,18 +38,17 @@ body {
 }
 
 .subheading {
-  color: var(--text-dark);
   font-size: 1.2rem;
+  color: var(--text-dark);
   margin-bottom: 30px;
 }
 
-/* App Grid Layout */
+/* Grid Setup */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  justify-items: center;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 40px;
 }
 
@@ -62,6 +57,7 @@ body {
   border-radius: 20px;
   padding: 20px;
   width: 120px;
+  margin: auto;
   transition: transform 0.3s ease;
 }
 
@@ -76,31 +72,30 @@ body {
 }
 
 .app p {
+  margin: 0;
   font-weight: 500;
-  color: var(--primary);
 }
 
-/* Footer Area */
+/* Footer */
 .footer-links {
   margin-top: 20px;
 }
 
 .footer-links a {
-  text-decoration: none;
   color: var(--primary);
+  text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
 }
 
 .footer-links button {
-  display: block;
-  margin: 12px auto 0;
-  background-color: var(--primary);
+  margin-top: 10px;
+  background: var(--primary);
   color: white;
   border: none;
-  padding: 12px 20px;
-  font-size: 1rem;
+  padding: 12px 24px;
   border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -114,9 +109,5 @@ body {
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  .app {
-    width: 80%;
   }
 }
