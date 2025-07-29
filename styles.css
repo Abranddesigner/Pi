@@ -1,3 +1,4 @@
+/* Reset and theme */
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +7,10 @@
 
 :root {
   --primary: #7E5FFF;
-  --text-dark: #000000;
+  --text-dark: #111111;
+  --text-muted: #6B7280;
   --background: #ffffff;
+  --border-light: #E5E7EB;
 }
 
 body {
@@ -17,7 +20,7 @@ body {
   color: var(--primary);
 }
 
-/* Top Bar */
+/* Top Navigation Bar */
 .topbar {
   background-color: var(--primary);
   color: white;
@@ -26,7 +29,7 @@ body {
   font-weight: bold;
 }
 
-/* Section */
+/* Main Section */
 .content {
   padding: 30px 20px;
 }
@@ -43,7 +46,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* Grid Setup */
+/* Grid Layout */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -53,16 +56,20 @@ body {
 }
 
 .app {
+  display: block;
+  text-decoration: none;
   border: 2px solid var(--primary);
   border-radius: 20px;
   padding: 20px;
   width: 120px;
   margin: auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  color: var(--primary);
 }
 
 .app:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(126, 95, 255, 0.2);
 }
 
 .app img {
@@ -109,5 +116,9 @@ body {
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .app {
+    width: 80%;
   }
 }
