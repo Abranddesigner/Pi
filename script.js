@@ -1,16 +1,17 @@
 // script.js
 
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Pi Ecosystem Page Loaded");
+document.addEventListener("DOMContentLoaded", () => {
+  const appCards = document.querySelectorAll(".app-card");
 
-  // Redirect header to PDF in new tab
-  const header = document.querySelector(".top-bar");
-  if (header) {
-    header.addEventListener("click", function () {
-      window.open(
-        "https://ik.imagekit.io/kamalprp/Pi%20Network%20pdf.pdf?updatedAt=1753691360582",
-        "_blank"
-      );
+  appCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const appName = card.querySelector("p").textContent;
+      console.log(`Opening: ${appName}`);
     });
-  }
+  });
+
+  const footerLink = document.querySelector("footer a");
+  footerLink.addEventListener("click", () => {
+    console.log("Navigating to Privacy Policy");
+  });
 });
