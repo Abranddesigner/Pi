@@ -63,9 +63,9 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 5px;
-  row-gap: 3px;
-  max-width: 800px;
+  column-gap: 1px;
+  row-gap: 8px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
