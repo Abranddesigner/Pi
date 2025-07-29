@@ -1,4 +1,3 @@
-/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -21,19 +20,18 @@ body {
 
 .topbar {
   background-color: var(--purple);
-  padding: 8px 0;
+  padding: 6px 0;
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .topbar img {
-  height: 20px;
+  height: 18px;
 }
 
 .content {
@@ -41,7 +39,7 @@ body {
 }
 
 .heading {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: orange;
   margin-bottom: 8px;
   display: flex;
@@ -51,12 +49,13 @@ body {
 }
 
 .heading img {
-  height: 20px;
+  height: 18px;
 }
 
 .subheading {
   font-size: 1rem;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .grid {
@@ -69,7 +68,7 @@ body {
 
 .app {
   background-color: var(--white);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 10px;
   text-decoration: none;
   color: var(--purple);
@@ -81,14 +80,14 @@ body {
 
 .app:hover {
   background-color: #f3f4f6;
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 .app img {
   width: 50px;
   height: 50px;
   margin-bottom: 6px;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .app p {
@@ -156,17 +155,17 @@ body {
   }
 
   .topbar {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding: 6px 0;
   }
 
   .topbar img,
   .heading img {
-    height: 18px;
+    height: 16px;
   }
 
   .heading {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .subheading {
