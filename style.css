@@ -1,4 +1,4 @@
-/* Reset and theme */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,124 +6,141 @@
 }
 
 :root {
-  --primary: #7E5FFF;
+  --purple: #703d92;
+  --white: #ffffff;
   --text-dark: #111111;
-  --background: #ffffff;
+  --link: #3B82F6;
 }
 
-/* Top purple bar */
-.topbar {
-  background-color: var(--primary);
-  color: white;
-  padding: 12px 0;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Main body */
+/* Body */
 body {
-  background: var(--background);
   font-family: 'Segoe UI', sans-serif;
-  text-align: center;
+  background-color: var(--white);
   color: var(--text-dark);
+  text-align: center;
 }
 
-/* Page section */
+/* Topbar */
+.topbar {
+  background-color: var(--purple);
+  padding: 14px 0;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section */
 .content {
-  padding: 30px 20px;
+  padding: 30px 16px;
 }
 
-/* Headings */
 .heading {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: orange;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .subheading {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
 }
 
-/* App icon grid */
+/* App Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 700px;
-  margin: 0 auto 40px;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .app {
+  background-color: var(--white);
+  border: 2px solid var(--purple);
+  border-radius: 18px;
+  padding: 12px;
+  text-decoration: none;
+  color: var(--purple);
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  border-radius: 20px;
-  padding: 16px;
-  width: 120px;
-  margin: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s;
+  transition: 0.3s;
 }
 
 .app:hover {
   background-color: #f3f4f6;
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .app img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 6px;
   border-radius: 12px;
 }
 
 .app p {
   margin: 0;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 /* Footer */
 .footer {
-  margin-top: 30px;
+  background-color: var(--purple);
+  padding: 20px 10px;
+  margin-top: 40px;
 }
 
-.privacy {
-  color: var(--primary);
+.footer a.privacy {
+  color: white;
   font-weight: bold;
   text-decoration: none;
   font-size: 1rem;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .explore-btn {
-  display: block;
-  margin: 14px auto 0;
-  background: var(--primary);
-  color: #fff;
+  background-color: white;
+  color: var(--purple);
   border: none;
-  padding: 10px 24px;
+  padding: 10px 22px;
   font-size: 1rem;
   border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* Responsive layout */
+.explore-btn:hover {
+  background-color: #eee;
+}
+
+/* Responsive Grid */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
   }
 
   .app {
-    width: 80%;
+    padding: 10px;
+  }
+
+  .app img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .app p {
+    font-size: 0.8rem;
   }
 }
