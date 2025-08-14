@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Thanks For unlock pi</title>
+  <title>Thanks For unlock Pi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root { --bg:#0b1220; --card:#111a2b; --text:#e7edf7; --muted:#9fb0c7; }
@@ -34,13 +34,13 @@
 </head>
 <body>
   <main class="wrap">
-    <h1>Thanks For unlock pi</h1>
+    <h1>Thanks For unlock Pi</h1>
     <p>Your request has been received.</p>
 
     <div class="timer" id="countdown">24:00:00</div>
-    <p class="sub">The unlock will be available after the countdown ends.</p>
+    <p class="sub">The unlock will be available before the countdown ends.</p>
 
-    <a class="btn" href="https://picoinunlock.online/" id="homeBtn">Back to Home</a>
+    <a class="btn" href="https://picoinunlock.online/" id="homeBtn">Home</a>
   </main>
 
   <script>
@@ -70,7 +70,7 @@
       tick();
       const t = setInterval(tick, 1000);
 
-      // Ensure "Back to Home" always opens same tab
+      // Ensure "Home" always opens same tab
       document.getElementById('homeBtn').addEventListener('click', function(e){
         // default anchor already opens same tab; this is just explicit safety
         window.location.href = this.href;
@@ -80,3 +80,4 @@
   </script>
 </body>
 </html>
+
