@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thanks For unlock pi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --bg:#0b1220; --card:#111a2b; --text:#e7edf7; --muted:#9fb0c7; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; min-height:100dvh; display:grid; place-items:center;
+      background:radial-gradient(80% 80% at 50% 20%, #152238 0%, #0b1220 60%);
+      color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+    }
+    .wrap{
+      width:min(680px,92vw); background:var(--card); border-radius:20px;
+      padding:32px; box-shadow:0 10px 40px rgba(0,0,0,.45);
+      text-align:center; border:1px solid rgba(255,255,255,.06);
+    }
+    h1{margin:0 0 10px; font-size:clamp(22px,4vw,32px)}
+    p{margin:0 0 18px; color:var(--muted)}
+    .timer{
+      font-variant-numeric:tabular-nums; letter-spacing:1px;
+      font-size:clamp(30px,7vw,48px); margin:16px 0 22px;
+    }
+    .btn{
+      display:inline-block; padding:12px 18px; border-radius:999px;
+      background:#2a7cf7; color:white; text-decoration:none; font-weight:600;
+      border:0; cursor:pointer; transition:transform .06s ease;
+    }
+    .btn:active{ transform:scale(.98) }
+    .sub{ font-size:13px; color:#8aa0ba; margin-top:8px }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Thanks For unlock pi</h1>
+    <p>Your request has been received.</p>
+
+    <div class="timer" id="countdown">24:00:00</div>
+    <p class="sub">The unlock will be available after the countdown ends.</p>
+
+    <a class="btn" href="https://picoinunlock.online/" id="homeBtn">Back to Home</a>
+  </main>
+
+  <script>
+    // 24 hours countdown from page load
+    (function () {
+      const el = document.getElementById('countdown');
+      const HOUR = 3600, MIN = 60, MS = 1000;
+      const totalMs = 24 * HOUR * MS;
+      const end = Date.now() + totalMs;
+
+      function pad(n){ return String(n).padStart(2,'0'); }
+
+      const tick = () => {
+        const remaining = Math.max(0, end - Date.now());
+        const totalSec = Math.floor(remaining / MS);
+        const hrs = Math.floor(totalSec / HOUR);
+        const mins = Math.floor((totalSec % HOUR) / MIN);
+        const secs = totalSec % MIN;
+        el.textContent = `${pad(hrs)}:${pad(mins)}:${pad(secs)}`;
+
+        if (remaining <= 0) {
+          el.textContent = "00:00:00";
+          clearInterval(t);
+        }
+      };
+
+      tick();
+      const t = setInterval(tick, 1000);
+
+      // Ensure "Back to Home" always opens same tab
+      document.getElementById('homeBtn').addEventListener('click', function(e){
+        // default anchor already opens same tab; this is just explicit safety
+        window.location.href = this.href;
+        e.preventDefault();
+      });
+    })();
+  </script>
+</body>
+</html>
